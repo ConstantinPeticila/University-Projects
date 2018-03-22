@@ -1,0 +1,68 @@
+//PETICILA CONSTANTIN 321 CB
+import java.io.*;
+import java.util.*;
+
+class MainClass {
+
+    
+   private void expresienod(int n,int k,PrintWriter writer){
+        int nr ,nr2; //auxiliare
+	//cel putin o culoare pentru fiecare nod        
+	for(int i = 0;i < n;i++){ //pentru fiecare nod
+            
+ 	    if(k > 1)	//daca avem mai mult de o culoare posibila pentru fiecare nod
+           writer.print("(");
+            
+	     for(int j = 0;j< k;j++){ //pentru fiecare culoare
+                nr = i*k+j;	//forma literalilor pentru nodul i ceruta in enunt
+                writer.print("x"+nr);
+                if( j < k -1)	//verificare sfarsit clauza
+                    writer.print("V");	//sau intre literali
+            }
+
+	    if(k > 1)
+            writer.print(")");
+            if(i < n-1) //terminare expresie
+                writer.print("^"); // si intre clauze
+        }
+
+	//maxim o culoare pentru fiecare nod 
+            for(int i = 0 ; i < n;i++){ //fac clauze cu fiecare doi literali pentru toate nodurile
+                for(int j = 0;j < k;j++){
+                     nr = i*k+j;
+                    for(int jj = j+1;jj < k;jj++){	//literali doi cate doi
+                        nr2 = i*k+jj;
+                        writer.print("^(~x"+nr2+"V~"+"x"+nr+")");
+                    }
+                }
+            }
+     }
+
+    public static void main(String args[])throws Exception {
+
+        File f = new File("test.in");	//fisier de citire
+        Scanner sc = new Scanner(f);	//scaner pentru citire
+ 	      PrintWriter writer = new PrintWriter("test.out", "UTF-8");	//fisier de out
+
+        int nrnod = sc.nextInt(); //numarul de noduri
+        int nrmuchii = sc.nextInt();  //numarul de muchii
+        int nrcl = sc.nextInt();  //numarul de culori
+      
+	      MainClass m = new MainClass();
+        m.expresienod(nrnod,nrcl,writer); //realizare expresiei F1 amintite in README
+       //Realizare expresiei F2 din README
+	//culori diferite pentru noduri intre care exista muchie
+            for(int i = 0;i<nrmuchii;i++ ){ //pentru fiecare muchie
+                int x1 = sc.nextInt()*nrcl;	//forma literali
+                int x2  = sc.nextInt()*nrcl;
+                for(int j = 0 ; j < nrcl;j++){ //pentru fiecare culoare formez clauza intre variabilele echivalente nodurilor 
+                    writer.print("^(~x"+x1+"V~x"+x2+")");
+                    x1++; //trec la urmatoarea culoare
+                    x2++;
+                }
+
+            }
+      
+	writer.close();
+    }
+}

@@ -1,0 +1,88 @@
+#########################################
+#					#
+#		TEMA 3 IOCLA 		#
+#	  PETICILA CONSTANTIN	 	#
+#			321CB		#
+#					#
+#########################################
+
+#################################
+# 				#				
+#  		TASK1	 	#
+#    Analiza statica si 	#
+#	    dinamica	 	#
+#			     	#
+#################################
+
+Functia ce reprezinta meniul si pentru care un nume sugestiv ar fi "menu" se afla la adresa 0x0804893A din program.Aceasta functie nu are paramterii insa aloca pe stiva spatiu,mai exact 4 bytes,necesari pentru citirea unui caracter de la tastatura.In functie de caracterului introdus,se selecteaza una din optiuni,implementate cu ajutorul unei constructii de tip switch,comparandu-se in prima faza cu numarul maxim de algeri pentru validarea sau nu a caracterului,iar apoi urmand o apelare a uneia dintre functii,variind in functie de caracter:
+#####
+# 0 #
+#####
+Se apeleaza functia cu adresa 0x08048679 care nu primeste niciun parametru.Functia afiseaza un mesaj de forma "Enter the valid serial" iar apoi se creeaza un buffer de 32 de bytes,corespunzator citirii de la tastatura a messjului introdus(sirul de caractere).Se citeste mesajul cu ajutorul functiei "scanf".
+Urmeaza apoi validarea sirului,prin apelul functiei de la adresa 0x08048A5D care primeste bineinteles ca parametru un sir de caractere.Functia,pentru care un nume potrivit "checkString" face operatii pe bytes sirului,verifica fiecare caracter daca este corect,eventual prin accesarea unor functii precum cea de la adresa 0x08048A29 pe care as denumi-o ascii_to_hex sau functia ce se ocupa de curatarea anumitor registrii,aceasta verificare facandu-se prin schimbarea valorii din registru eax in cazul unui sir incorect.
+La sfarsit,in functia de unde s-a facut apelul (cea de la adresa 0x0x08048679),pe care as denumi-o "trySerialKey", se va afisa un mesaj corespunzator corectitudinii sau nu a stringului ("Correct"/"Nope,try again").
+#####
+# 1 #
+#####
+Se apeleaza functia cu adresa 0x080486EA care nu primeste niciun parametru.Functia aloca un buffer de 20 de bytes pentru a citi ulterior sirul de caractere introdus,afiseza un mesaj de introducere a numelui cu ajutorul functiei externe "printf" iar  apoi realizeaza citirea stringului introdus cu ajutorul functiei externe "scanf".Se observa ca in cazul depasirii dimensiunii maxime specifice inputului care este si dimensiunea bufferului rezulta un comportament ciudat prin rularea la infinit a programului.Un nume sugestiv pentru aceasta functie este "nameReader".
+#####
+# 2 #
+#####
+Se apeleaza functia cu adresa 0x08048710 care nu primeste niciun parametru.Se observa ca aceasta optiune are un comportament asemanator optiunii 1,diferenta fiind ca bufferul alocat e de 16 iar comportamentul ciudat reprezinta seg fault.Un nume sugestiv pentru aceasta ar fi "adressReader"
+#####
+# 3 #
+#####
+Se apeleaza functia cu adresa 0x08048736 care nu primeste niciun parametru.Functia deschide un buffer de 4 de bytes insa citeste 24 de bytes folosind fuctia "read" si astfel se poate produce buffer overflow si se pot suprascrie variabile pe stiva,adrese de return precum si parametrii,comportament nedorit al programului.Un nume sugestiv al acestei functii ar fi "overflowMaker".
+#####
+# 4 #
+#####
+Se apeleaza functia de la adresa 0x0804874E care are scopul de a verifica daca se poate deschide un buffer de dimensiune 1024 -conditiile au fost respectate,sau nu ( in acest caz se afiseaza mesajul "vault is still locked").
+In caz afirmativ,bufferul se umple cu elemente citite cu ajutorul functiei read.Pentru a trece se verifica daca suma elementelor este egala cu 12345h(=74565).Suma de calculat se realizeaza in functia de la adresa 0x080485EB ,care primeste ca argument sirul de caractere.Se compara contorul de parcurgere a bufferului cu 1023,se realizeaza suma consecutiv iar cand se ajunge la aceasta valoare a contorului se verifica valoarea sumei.
+Daca conditia a fost respectata,se foloseste functia externa strstr si se verifica daca sirul contine numele meu.Dupa ce se realizeaza cele doua verificari necesare cu succes,se apeleaza functia mrpotect pentru buffer si se iese din functie.
+Un nume sugestiv pentru aceasta functie ar fi "checkVault". 
+#####
+# 5 #
+#####
+In acest caz se afiseaza un mesaj de bye,cu ajutorul functiei puts iar apoi se realizeaza terminarea programului prin apelarea functiei "exit".
+################
+# alta valoare #
+################
+In cazul in care se citeste orice alta valoare se afiseaza un mesaj de alegere incorecta.
+
+######
+In toate cazurile,exceptie facand cazul 5 de leave, se sare neconditionat inapoi la inceputul functei main.
+
+#################
+#   serialkey  	#
+#################
+Pentru alegerea 0 ni se cere  sa introducem serialkey.
+Dupa parcurgerea codului am observat ca in acest caz se apeleaza functia,pentru care un nume potrivit "checkString" si se fac operatii pe bytes sirului.Aceasta functie verifica fiecare caracter daca este cel potrivit,eventual prin accesarea unor functii precum cea de la adresa 0x08048A29 pe care as denumi-o ascii_to_hex,numele fiind sugestiv pentru rolul acesteia, sau functia ce se ocupa de curatarea anumitor registrii,aceasta verificare facandu-se prin schimbarea valorii din registru eax in cazul unui sir incorect.
+Fiecare caracter trebuie sa treaca de aceste verificari facute prin comparatii astfel incat,valoarea anumitor registre sa nu se modifice (eax).
+
+#########################################
+# 					#				
+#  		TASK2			#
+#    Identificare vunerabilitati	#
+#				     	#
+#########################################
+
+Dupa parcurgerea taskului 1 si inclusiv a intregului cod am remarcat o posibila vulnerabilitate de tipul buffer overflow in functia specifica alegerii 3.
+In aceasta functie se face o alocare de spatiu pe stiva de dimensiune 4 bytes.
+Se observa apoi ca numarul de caractere citit de functia read va fi de pana la 24 de bytes,aceasta fiind dimesiunea data.In acest fel,pe langa suprascrierea celor 4 bytes din buffer se vor putea suprascrie si alte locatii de memorie,adresa de retur etc ; alterand astfel executia normala a functiei si avand acces la apelul catre alte functii.
+Concret,aceasta vulnerabilitatea poate fi folosita pentru spargerea programului prin modificarea control flowului.
+Prin rulare in mod repetat am observat si o serie destul de mare de bug-uri.De la o simpla rulare cu introducerea a mai mult de un caracater pentru alegerea optiunilor se observa ca programul nostru crapa.De asemenea,aceasta problema este intalnita si la alegerile 0,2,3 atunci cand dimensiunea textului introdus depaseste dimensiunea bufferului alocat.Un bug asemanator este intalnit si la optiunea 1,unde pe cazuri diferite ce depasesc dimensiunea maxima admisa in cod,programul are un comportament ciudat,ruland la infinit sau asteptand in mod continuu input.
+Prin repetarea analizei codului nu am observat ca aceste buguri sa poata reprezenta vulnerabilitati pentru programul nostru,ci doar simple buguri,probleme generate de implementare incompleta dar de care cel mai posibil nu se poate profita.
+
+
+#################################
+# 				#				
+#  	   TASK3	 	#
+#    	Exploatare	 	#
+#			     	#
+#################################
+
+Pentru realizarea acestui task am profitat de buffer overflow de la optiunea 3. Pentru a ajunge in functia win trebuie sa trec mai intai prin cele trei functii unreachable pentru modificarea variabilelor si apoi sa trec la functia 4. Astfel, dupa ce am completat pe stiva offset-ul cu caractere 'A' am inlocuit adresa de retur a functiei cu adresa primei functii unreachable. Din prima functie ma intorc iar in functia 3 unde se face buffer overflow pentru accesarea celei de-a doua functii. Pentru cea de-a doua functie trebuie dat un parametru corect pentru a merge mai departe, parametrul acela fiind "0xdeadc0de". La fel ca prima data, ma intorc in functia 3 pentru a face iar buffer overflow si a merge catre a treia functie unreachable careia i-am calculat parametrii corecti ca fiind "0x78f26913" si "0x65bb55dc".
+De aici ar fi trebuit sa merg in functia 4, dar am considerat ca e mai simplu sa ma intorc direct la adresa unde se afiseaza win. Astfel, nu a mai trebuit sa trec prin toate conditiile din functia 4.
+
+
+	

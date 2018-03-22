@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    Tema 3    [CS Open CourseWare]
+  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2018-01-11T15:33:17+0200">
+<meta name="keywords" content="iocla,teme,tema-3">
+<link rel="search" type="application/opensearchdescription+xml" href="https://ocw.cs.pub.ro/courses/lib/exe/opensearch.php" title="CS Open CourseWare">
+<link rel="start" href="https://ocw.cs.pub.ro/courses/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://ocw.cs.pub.ro/courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="https://ocw.cs.pub.ro/courses/feed.php?mode=list&amp;ns=iocla:teme">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://ocw.cs.pub.ro/courses/_export/xhtml/iocla/teme/tema-3">
+<link rel="canonical" href="http://ocw.cs.pub.ro/courses/iocla/teme/tema-3">
+<link rel="stylesheet" type="text/css" href="Tema%203%20[CS%20Open%20CourseWare]_files/css.css">
+<script type="text/javascript">/*<![CDATA[*/var NS='iocla:teme';var JSINFO = {"id":"iocla:teme:tema-3","namespace":"iocla:teme","isadmin":0,"isauth":0};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="Tema%203%20[CS%20Open%20CourseWare]_files/js.php"></script>
+<script type="text/x-mathjax-config;executed=true">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script src="Tema%203%20[CS%20Open%20CourseWare]_files/MathJax.js" id=""></script>
+<script type="text/javascript">/*<![CDATA[*/
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+/*!]]>*/</script><script src="Tema%203%20[CS%20Open%20CourseWare]_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var pageTracker = _gat._getTracker("UA-38383934-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+/*!]]>*/</script>
+
+  <link rel="shortcut icon" href="https://ocw.cs.pub.ro/courses/lib/tpl/arctic/images/favicon.ico">
+
+  
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="wrapper" class="show">
+  <div class="dokuwiki">
+
+    
+    <div class="stylehead">
+      <div class="header">
+        <div class="pagename">
+          <a href="https://ocw.cs.pub.ro/courses/iocla/"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/sigla_iocla.png" height="70"> </a>        </div>
+        <div class="logo">
+          <a style="color: #AAA !important;" href="https://ocw.cs.pub.ro/courses/">Open CourseWare</a>        </div>
+      </div>
+    
+       
+      <div class="breadcrumbs">
+              </div>
+      
+            </div>
+
+                  <div class="bar" id="bar__top">
+        <div class="bar-left">
+                  </div>
+        <div class="bar-right">
+          <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes [R]">Recent changes</a><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=login&amp;sectok=bdcbe035b9a2afc3c87488e59949e704" class="action login" rel="nofollow" title="Login">Login</a>        </div>
+    </div>
+        
+    
+    
+    
+              <div class="left_page">
+          
+<h1 class="sectionedit1" id="tema_3">Tema 3</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Deadline Soft: 14.01.2018 23:55</div>
+</li>
+<li class="level1"><div class="li"> Deadline Hard: 14.01.2018 23:55</div>
+</li>
+<li class="level1"><div class="li"> Data publicării: 12.12.2017 <code>04:00</code></div>
+</li>
+<li class="level1"><div class="li"> Data ultimei modificări: 10.01.2018 <code>04:00</code></div>
+</li>
+<li class="level1"><div class="li"> Responsabili:</div>
+<ul>
+<li class="level2"><div class="li"> <a href="mailto:pripoaesilvia@gmail.com" class="mail" title="pripoaesilvia@gmail.com">Silvia Pripoae</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="mailto:vladimir.diaconescu@cs.pub.ro" class="mail" title="vladimir.diaconescu@cs.pub.ro">Vladimir Diaconescu</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="enunt">Enunț</h2>
+<div class="level2">
+
+<p>
+Să se analizeze un executabil, atât prin metode statice cât și dinamice, pentru a:
+</p>
+<ul>
+<li class="level1"><div class="li"> înțelege funcționalitățile expuse</div>
+</li>
+<li class="level1"><div class="li"> înțelege logica programului</div>
+</li>
+<li class="level1"><div class="li"> determina un ”serial key” valid</div>
+</li>
+<li class="level1"><div class="li"> identifica și exploata potențiale vulnerabilități</div>
+</li>
+</ul>
+
+<p>
+Tema are trei părți:
+</p>
+
+</div>
+
+<h3 class="sectionedit3" id="analiza_statica_si_dinamica_-_30p">1. Analiză statică și dinamică - 30p</h3>
+<div class="level3">
+
+<p>
+Programul trebuie analizat în mod amănunțit (dar cu mai puțin accent pe 
+detalii) prin metodele învățate în laborator. Ce se urmărește:
+- înțelegerea codului propriu-zis. Executabilul conține mai multe 
+funcții și variabile globale, identificate doar prin adrese. În cadrul 
+README-ului va trebui să faceți o descriere a acestor funcții și 
+variabile: adresa la care se găsesc în cod, câte argumente au, tipul 
+acestora, ce rezultat(e) întorc, ce nume le-ați atribui, unde sunt 
+folosite, la ce sunt folosite, precum și o descriere de nivel înalt a 
+codului (respectiv, să vă gândiți cum ați scrie într-un pseudocod 
+simplificat, sau cum ați descrie foarte sumar esențialul).
+</p>
+
+<p>
+Spre exemplu:
+</p>
+<pre class="code">.text:00402510 sub_402510      proc near
+.text:00402510                 push    ebp
+.text:00402511                 mov     ebp, esp
+.text:00402513                 push    ecx
+.text:00402514                 push    edi
+.text:00402515                 mov     edi, [ebp+8]
+.text:00402518                 or      ecx, 0FFFFFFFFh
+.text:0040251B                 xor     eax, eax
+.text:0040251D                 repne scasb
+.text:0040251F                 not     ecx
+.text:00402521                 add     ecx, 0FFFFFFFFh
+.text:00402524                 cmp     ecx, 4
+.text:00402527                 jz      short loc_40252D
+.text:00402529                 xor     eax, eax
+.text:0040252B                 jmp     short loc_4025A0
+...</pre>
+
+<p>
+Descriere de nivel scăzut: funcția salvează vechiului ebp pe stivă, apoi
+ se actualizează valoarea la vârful curent al stivei. Apoi se salvează 
+pe stivă regiștrii ecx și edi etc.
+</p>
+
+<p>
+Descriere de nivel înalt: funcția are un singur argument, o adresă a unui șir. Se verifică dacă lungimea șirului este 4.
+</p>
+
+<p>
+Tema urmărește înțelegerea codului într-un sens mai abstract; drept 
+urmare, nu prezintă interes dacă un registru se inițializează la 
+valoarea 0 prin mov eax, 0 sau xor eax, eax.
+</p>
+
+<p>
+Toate aceste lucruri trebuie documentate în README.
+</p>
+
+<p>
+În cadrul punctajului acestei părți intră opțiunea ”0” din binar, în 
+care trebuie să găsiți un serial key valid. Pentru aceasta, trebuie să 
+înțelegeți în ce constă codul de verificare și ce condiții trebuie să 
+valideze serial key-ul.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="identificare_vulnerabilitati_-_20p">2. Identificare vulnerabilități - 20p</h3>
+<div class="level3">
+
+<p>
+Pentru această parte, trebuie să urmăriți cu atenție datele locale din 
+funcții și să testați dacă nu cumva aveți de-a face cu situații de tipul
+ buffer overflow. Documentați în README bug-urile și vulnerabilitățile 
+găsite, cu explicații aferente pentru fiecare.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="exploatare_-_50p">3. Exploatare - 50p</h3>
+<div class="level3">
+
+<p>
+În ultima parte, va trebui să vă alegeți cu grijă vulnerabilitățile pe 
+care să le exploatați, prin construcția unor date de intrare, în vederea
+ alterării fluxului de execuție într-un sens bine-stabilit.
+</p>
+
+<p>
+Această parte este construită sub forma unui ”puzzle” în care trebuie să
+ apelați anumite funcții pentru a putea avea acces la o altă funcție. 
+Datele de intrare vor trebui construite în așa manieră încât să treacă o
+ serie de condiții și în același timp să poată modifica execuția 
+programului.
+</p>
+
+<p>
+</p><p></p><div class="notetip">
+Scopul exploatării este de a apela funcția care afișează mesajele 
+“Win!”, respectiv “Try harder!” in baza unei verificări, astfel încât 
+condiția să fie îndeplinită (se afișează “Win!”). O soluție în care 
+săriți peste verificare direct la afișarea propriu-zisă a mesajului 
+obține același rezultat, dar nu constituie obiectul temei.
+
+</div><p></p>
+<p></p><div class="noteimportant">
+Pentru a avea adrese consistente la fiecare rulare, trebuie să dezactivați ASLR (<em>Address Space Layout Randomization</em>).
+ Folosiți comanda de mai jos pentru a crea un shell cu ASLR dezactivat, 
+orice programe rulate din shell având și ele ASLR dezactivat:
+<p></p>
+<pre class="code">setarch $(uname -m) -R /bin/bash</pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit6" id="setup">Setup</h2>
+<div class="level2">
+
+<p>
+Pentru dezvoltarea temei va trebui să folosiți mașina virtuală de Linux de 32 de biți descrisă în secțiunea <a href="https://ocw.cs.pub.ro/courses/iocla/utile#masini-virtuale" class="wikilink1" title="iocla:utile">Mașini virtuale</a> din pagina de resurse. Această mașină virtuală este folosită și pentru verificarea temei pe <a href="https://vmchecker.cs.pub.ro/ui/#IOCLA" class="urlextern" title="https://vmchecker.cs.pub.ro/ui/#IOCLA" rel="nofollow">vmchecker</a>.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">
+Puteți testa anumite funcționalități pe alt sistem, dar implementarea 
+voastră trebuie să meargă pe mașina virtuală. Este posibil ca, datorită 
+mediului diferit, anumite payload-uri să meargă pe un alt sistem dar nu 
+pe mașina virtuală. Folosiți, ca referință, mașina virtuală.
+
+</div><p></p>
+<p></p>
+
+<p>
+Pentru a obține programul aferent temei, rulați comanda:
+</p>
+<pre class="code">echo "Prenume Nume Grupa" | nc 141.85.224.119 1337 &gt; tema3</pre>
+
+<p>
+Cele 3 câmpuri trebuie să conțină doar litere mici, litere mari, cifre 
+și cratimă. Fiecare temă va fi construită în funcție de datele voastre.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+De exemplu, pentru <code>Ionescu Anca-Monica</code> de la grupa <code>323CA</code>, modul de obținere al temei asociate va fi:
+<p></p>
+<pre class="code">echo "Anca Ionescu 323CA" | nc 141.85.224.119 1337 &gt; tema3</pre>
+
+<p>
+
+</p></div><p></p>
+Comanda de mai sus va crea fișierul <code>tema3</code>. Acesta este fișierul propriu-zis al temei care trebuie analizat și rezolvat.
+<p></p>
+
+</div>
+
+<h2 class="sectionedit7" id="implementare">Implementare</h2>
+<div class="level2">
+
+<p>
+La nivelul implementării, aveți de determinat serial key-ul valid, de 
+documentat în README și de generat un fișier cu date de intrare pentru 
+program care să-i altereze execuția în așa fel încât să rezolvați 
+puzzle-ul în starea de ”Win!”
+</p>
+
+<p>
+Recomandăm să generați acest fișier de intrare folosind un script Python (sau orice alt limbaj de programare).
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="trimitere_si_notare">Trimitere și notare</h2>
+<div class="level2">
+
+<p>
+Temele vor trebui încărcate pe platforma <a href="https://vmchecker.cs.pub.ro/ui/#IOCLA" class="urlextern" title="https://vmchecker.cs.pub.ro/ui/#IOCLA" rel="nofollow">vmchecker</a> (în secțiunea IOCLA) și vor fi testate automat. Arhiva încărcată va fi o arhivă <code>.zip</code> care trebuie să conțină:
+</p>
+<ul>
+<li class="level1"><div class="li"> fișierul <code>serial_key</code>, care va conține serial key-ul pentru rezolvarea opțiunii “0” din binar</div>
+<ul>
+<li class="level2"><div class="li"> E necesar ca fisierul sa contina 3 linii:</div>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="code">0
+&lt;key&gt;
+5</pre>
+<ul>
+<li class="level1"><div class="li"> fișierul README, care va conține:</div>
+<ul>
+<li class="level2"><div class="li"> analiza codului</div>
+</li>
+<li class="level2"><div class="li"> enunțarea și explicarea vulnerabilităților găsite</div>
+</li>
+<li class="level2"><div class="li"> descrierea întregului proces de exploatare, pe pași</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> fișierul <code>payload</code> pentru program</div>
+<ul>
+<li class="level2"><div class="li"> Dacă ați folosit un script atunci adăugați în arhiva submisă și scriptul cu care ați obținut acest payload</div>
+<ul>
+<li class="level3"><div class="li"> Dacă nu ați folosit un script atunci adăugați în README modul de obținere a payload-ului.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> fișierul <code>credentials</code> care conține numele, prenumele și grupa, exact așa cum au fost folosite pentru a genera tema, fiecare pe câte o line, astfel:</div>
+</li>
+</ul>
+<pre class="code">&lt;Nume&gt;
+&lt;Prenume&gt;
+&lt;Grupa&gt;</pre>
+<ul>
+<li class="level1"><div class="li"> scriptul (sau scripturile) de generare a fișierului <code>payload</code></div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit9" id="precizari_suplimentare">Precizări suplimentare</h2>
+<div class="level2">
+
+<p>
+Datele din fișierul <code>credentials</code> trebuie să fie corecte și 
+să coincidă cu cele pe care le-ați folosit pentru a obține tema. În 
+cazul în care aveți două prenume, alegeți unul pe care să-l folosiți.
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="recomandari">Recomandări</h2>
+<div class="level2">
+
+<p>
+Întrucât binarul nu are simboluri (funcțiile nu au nume, sunt doar 
+adrese), este foarte dificil de lucrat doar cu objdump și gdb, 
+recomandăm <a href="https://www.hex-rays.com/products/ida/support/download_freeware.shtml" class="urlextern" title="https://www.hex-rays.com/products/ida/support/download_freeware.shtml" rel="nofollow">IDA Free</a>
+ pentru analiza statică. Vă simplifică viața prin faptul că vă permite 
+să redenumiți variabile și funcții și să adăugați comentarii pe marginea
+ codului, iar codul poate fi afișat sub forma unui graf din care se văd 
+mai clar buclele.
+</p>
+
+<p>
+La partea de analiză, încercați să vedeți ”big picture” și să evitați să vă pierdeți în detalii.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="resurse_ajutatoare">Resurse ajutătoare</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-09" class="wikilink1" title="iocla:laboratoare:laborator-09">Laborator 9</a>: Interfața în linia de comandă, analiza statică și dinamică</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-10" class="wikilink1" title="iocla:laboratoare:laborator-10">Laborator 10</a>: Gestiunea bufferelor. Buffer overflow</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-10" class="wikilink1" title="iocla:laboratoare:laborator-10">Laborator 11</a>: Exploatarea memoriei. Shellcodes</div>
+</li>
+</ul>
+
+</div>
+
+        </div>
+        <div class="right_sidebar">
+          <form action="/courses/start" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input name="do" value="search" type="hidden"><input id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" type="text"><input value="Search" class="button" title="Search" type="submit"><div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none;"></div></div></form>          <div class="namespace_sidebar sidebar_box">
+
+
+
+<div><div id="nojs_indexmenu_7736437655a6ede4a18ec9" data-jsajax="%26skipfile%3D%252B/iocla%253A%2528sidebar%257Cindex%2529/" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/anunturi" class="wikilink1" title="iocla:anunturi">Anunțuri</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/bune-practici" class="wikilink1" title="iocla:bune-practici">Bune practici</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/calendar" class="wikilink1" title="iocla:calendar">Calendar</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/catalog" class="wikilink1" title="iocla:catalog">Catalog</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/feed" class="wikilink1" title="iocla:feed">Feed RSS</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/need-to-know" class="wikilink1" title="iocla:need-to-know">IOCLA Need to Know</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare" class="wikilink1" title="iocla:reguli-notare">Reguli și notare</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/utile" class="wikilink1" title="iocla:utile">Resurse utile</a></div></li>
+</ul>
+</div></div>
+
+<h1 class="sectionedit1" id="cursuri">Cursuri</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-01" class="wikilink1" title="iocla:cursuri:capitol-01">Capitol 01: Introducere</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-02" class="wikilink1" title="iocla:cursuri:capitol-02">Capitol 02: Reprezentarea datelor în sistemele de calcul</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-03" class="wikilink1" title="iocla:cursuri:capitol-03">Capitol 03: Arhitectura unui sistem de calcul</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-04" class="wikilink1" title="iocla:cursuri:capitol-04">Capitol 04: Arhitectura x86</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-05" class="wikilink1" title="iocla:cursuri:capitol-05">Capitol 05: Moduri de adresare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-06" class="wikilink1" title="iocla:cursuri:capitol-06">Capitol 06: Setul de instrucțiuni</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-07" class="wikilink1" title="iocla:cursuri:capitol-07">Capitol 07: Dezvoltarea în limbaj de asamblare pe x86</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-08" class="wikilink1" title="iocla:cursuri:capitol-08">Capitol 08: Inginerie inversă și exploatarea memoriei</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-09" class="wikilink1" title="iocla:cursuri:capitol-09">Capitol 09: Optimizări</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Cursuri" [166-547] -->
+<h1 class="sectionedit2" id="laboratoare">Laboratoare</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-01" class="wikilink1" title="iocla:laboratoare:laborator-01">Laborator 01: Introducere</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-02" class="wikilink1" title="iocla:laboratoare:laborator-02">Laborator 02: Toolchain</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-03" class="wikilink1" title="iocla:laboratoare:laborator-03">Laborator 03: First baby steps</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-04" class="wikilink1" title="iocla:laboratoare:laborator-04">Laborator 04: Rolul registrelor, adresare directă și bazată</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-05" class="wikilink1" title="iocla:laboratoare:laborator-05">Laborator 05: Lucrul cu stiva</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-06" class="wikilink1" title="iocla:laboratoare:laborator-06">Laborator 06: Apeluri de funcții</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-07" class="wikilink1" title="iocla:laboratoare:laborator-07">Laborator 07: Structuri, vectori. Recapitulare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-08" class="wikilink1" title="iocla:laboratoare:laborator-08">Laborator 08: Interactiunea C-assembly</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-09" class="wikilink1" title="iocla:laboratoare:laborator-09">Laborator 09: Interfața în linia de comandă, analiza statică și dinamică</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-10" class="wikilink1" title="iocla:laboratoare:laborator-10">Laborator 10: Gestiunea bufferelor. Buffer overflow</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-11" class="wikilink1" title="iocla:laboratoare:laborator-11">Laborator 11: Exploatarea memoriei. Shellcodes</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-12" class="wikilink1" title="iocla:laboratoare:laborator-12">Laborator 12: Operații pe numere mari</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Laboratoare" [548-1055] -->
+<h1 class="sectionedit3" id="teme">Teme</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1" class="wikilink1" title="iocla:teme:tema-1">Tema 1</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-2" class="wikilink1" title="iocla:teme:tema-2">Tema 2</a></div>
+</li>
+<li class="level1"><div class="li"> <span class="curid"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3" class="wikilink1" title="iocla:teme:tema-3">Tema 3</a></span></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Teme" [1056-] -->
+</div>
+<div class="toc_sidebar sidebar_box">
+<!-- TOC START -->
+<div id="sb__right__dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#tema_3">Tema 3</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#enunt">Enunț</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#analiza_statica_si_dinamica_-_30p">1. Analiză statică și dinamică - 30p</a></div></li>
+<li class="level3"><div class="li"><a href="#identificare_vulnerabilitati_-_20p">2. Identificare vulnerabilități - 20p</a></div></li>
+<li class="level3"><div class="li"><a href="#exploatare_-_50p">3. Exploatare - 50p</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#setup">Setup</a></div></li>
+<li class="level2"><div class="li"><a href="#implementare">Implementare</a></div></li>
+<li class="level2"><div class="li"><a href="#trimitere_si_notare">Trimitere și notare</a></div></li>
+<li class="level2"><div class="li"><a href="#precizari_suplimentare">Precizări suplimentare</a></div></li>
+<li class="level2"><div class="li"><a href="#recomandari">Recomandări</a></div></li>
+<li class="level2"><div class="li"><a href="#resurse_ajutatoare">Resurse ajutătoare</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+</div>
+        </div>
+      
+    
+      <div class="stylefoot">
+        <div class="meta">
+          <div class="user">
+                    </div>
+          <div class="doc">
+          iocla/teme/tema-3.txt · Last modified: 2018/01/11 15:33 by vladimir.diaconescu          </div>
+        </div>
+      </div>
+
+    <div class="clearer"></div>
+
+    
+                <div class="bar" id="bar__bottom">
+      <div class="bar-left">
+        <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a>      </div>
+      <div class="bar-right">
+        <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=media&amp;ns=iocla%3Ateme" class="action media" rel="nofollow" title="Media Manager">Media Manager</a><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a>      </div>
+    </div>
+    <div class="clearer"></div>
+            
+    <div class="footerinc" align="center">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/cc-by-sa.png" alt="CC Attribution-Share Alike 3.0 Unported"></a></div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/button-chimeric-de.png" alt="www.chimeric.de" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/button-css.png" alt="Valid CSS" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/button-dw.png" alt="Driven by DokuWiki" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/button-firefox.png" alt="do yourself a favour and use a real browser - get firefox!!" width="80" height="15" border="0"></a>
+  
+  <a target="_blank" href="https://ocw.cs.pub.ro/courses/feed.php" title="Recent changes RSS feed"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/button-rss.png" alt="Recent changes RSS feed" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/button-xhtml.png" alt="Valid XHTML 1.0" width="80" height="15" border="0"></a>
+</div>
+
+  </div>
+</div>
+
+<div class="no"><img src="Tema%203%20[CS%20Open%20CourseWare]_files/indexer.gif" alt="" width="2" height="1"></div>
+
+
+</body></html>

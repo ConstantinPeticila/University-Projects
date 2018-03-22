@@ -1,0 +1,37 @@
+#####################################
+#           TEMA-2-POO              #
+#    PETICILA CONSTANTIN 321CB	    #
+#####################################
+
+
+In realizarea acestei teme am folosit Desing Patternurile Observer,Singleton,Factory si Visitor sugerate in enuntul acesteia.
+voi prezenta sumar modul de functionare apoi voi prezenta cele mai importante subcategorii de realiare a temei: realizarea arborelui,crearea observerului si a visitorului.
+##########################
+# Sumar functionare tema #
+##########################
+Pentru realizarea temei am folosit  alaturi de alte desing patternuri si Observer Desing Pattern.
+Dupa modelul din resure am realizat o clasa Feed ce contine un ArrayList cu observatori.Aceasta clasa are metode specifice care se ocupa de informarea tuturor observatorilor din Lista,crearea unui observator,stergerea unuia sau afisarea acestuia.
+Un observer contine un TreeMap cu feeduri,aceste feeduri avand o structura cu nume,valoare,fluctatie,numarul de schimbari precum si o valoare anterioara utilizata pentru calcularea fluctuatiei.
+Clasa observer are metode ce sunt accesate de Feed si care presupun adaugarea in treemapul lor al unui feed sub forma unui feedStruct sau afisarea treemapului lor.
+Cand expresia observerului este nil serealizeaza direct afisarea elementor din treemap.
+Cand aceasta expresie este diferita se realizeaza scrierea postfixata,apoi se creeaza arborele si se returneaza nodul principal,apoi,in functie de ce tip de nod este acesta:Ornode,AndNode sau OperandNode se realizeaza visitarea acestuia recursiv pana se ajunge la frunze (detaliat in sectiunea specifica visitor) si in functie de numele sau valoarea fiecarui feed din treemapul observerului si de fiecare parte din expresia observerului,aflata in arbore se intoarce un boolean ce spune daca sa se afiseze feedul respectiv sau nu.
+
+##################################
+#Realizarea Arborelui de expresie#
+##################################
+Pentru aceasta am folosit expresia de la crearea unui observer.Aceasta expresie a fost salvata ca string iar apoi am pus spatii inainte si dupa paranteze.Am splitat intr-un vector de stringuri dupa spatii iar apoi am facut un arrayList ce contine expresia infixata in care elementele sunt "||","&&"<")","(" sau de forma "le value 32".Folosind acest List si o stiva auxiliara am realizat expresia postfixata dupa algoritmul ShuntingYard.
+Rezultatul acestui algoritm sub forma unui arrayList a fost folosit  apoi la creearea arborelui,metoda din clasa ExpresionTree folosind de asemenea si o stiva auxiliara si intorcand nodul principal-root
+##########
+#Observer#
+##########
+Observerii se disting printrun id-nrobs si un string - expresia de la crearea acestora.
+Pentru creearea observerilor am utilizat o structura feedstruct,care poate contine informatii despre un feed.Fiecare observator are cate un treemap cu elemente de tipul feedStruct.Pentru observer exista metode care permit afisarea elementelor din mapul sau in functie de expresia acestuia,si adaugarea de elemente in treemap sau schimbarea valorilor celor existente-update.
+##########
+#Visitor #
+##########
+Pentru realizarea acestuia am folosit o interfata IVisitor cu o metoda de vizitare si o interfata IVisitable cu o metoda de acceptare a visitorului.
+Am realizat apoi o clasa care implementeaza interfata IVisitor si care are metode de vizitare concrete pentru tipurile de noduri posibile si returneaza un rezultat aferent:de exemplu visitarea unui Ornod returneaza sau intre acceptarea fiilor acestuia.
+In mod asemanator am realizat o clasa Nod ce implementeaza interfata  Ivisitable si care e exista de alte 3 clase:tipurile de noduri.
+Algoritmul este unul recursiv,metodele de visitare ale lui visitor de un nod folosesc metodele de acceptare ale fiilor acestuia.Acestea folosesc metodele de visitare corespunzatoare lor.Algoritmul se repeta pana se ajunge la frunze deoarece toate nodurile inafara celor terminala sunt de tipul Ornode sau AndNode iar frunzele sunt de tipul Operand :ex:"le value 3.5"
+Cand se ajunge la OperandNode se parcurge expresia si se spliteraza intr-un vector de 3 stringuri.In functie de primul string se creeaza un operator aferent folosind factory pattern (ex: pt "le value 3.5"=>"le" =>se creeaza un obiect de tipul Le).Apoi folosind informatiile din feedul dat ca parametru se fac verificarile specifice fiecarei clase intre valoarea/numele feedului si cele respective stringului.
+In final,dupa aceste verificari se returneaza un boolean care va hotari daca acel feed dat ca argument in toti pasii de mai sus va fii afisat. 

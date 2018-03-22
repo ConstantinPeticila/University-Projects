@@ -1,0 +1,87 @@
+//Peticila Constantin 321CB
+ ========TEMA 2  IOCLA========
+ 
+ ---------
+ | task1 |
+ ---------
+ In rezolvarea acestui task am urmat urmatorii pasi:
+ -am pus cheia si stringul pe stiva
+ -in functie am luat cate un byte din fiecare
+ -am facut xor si am salvat in byteul din string
+ -am repetat pana am dat de null
+
+ ---------
+ | task2 |
+ ---------
+ In rezolvarea acestui task am urmat urmatorii pasi:
+ -am stringul pe stiva
+ -am facut xor byteului curent cu rezultatul antecedent                                                                 X 
+ -am salvat rezultatul in byte-ul curent din string
+ -am repetat pana am dat de null
+ 
+ ---------
+ | task3 |
+ ---------
+ In rezolvarea acestui task am urmat urmatorii pasi:
+ -am pus cheia si stringul pe stiva
+ -am luat cate doi byte din fiecare
+ -i am convertit scazand in functie de valoare din ei
+ -pentru a face un byte din doi dupa modelul dat am inmultit pe primul prin shiftare,utilizand cei mai semnificativi 4 biti din byte pentru el si l am adunat la celalalt
+ -am facut apoi xor intre rezultate
+ -am pus pe pozitia corespunzatoare din string
+ -am redus lungimea la jumate
+ -mi am pus null la sfarsit pentru a separa stringul
+ 
+---------
+| task4 |
+---------
+In rezolvarea acestui task am urmat urmatorii pasi:
+ -am verificat cat trebuie sa scad din fiecare byte
+ -am scazut in functie de cifra sau litera
+ -am analizat si am observat ca in realizarea base32 procedeul se repeta o data la 5 pasi dupa cum urmeaza:
+	*pentru primu cuplu:am folosit doi bytes:din primul toate valorie,deci l-am shiftat la stanga cu 3
+		-mi au ramas 3 biti liberi pe care i am "umplut" shiftand urmatorul bit la dreapta cu 2 si adunandu-l la primul
+		-am actualizat atat indexul de folosire cat si cel de completare cu 1
+	*pentru al doilea cuplu:-din primul byte am doar doua valori ramase si acestea trebuie sa fie puse pe cele mai mari pozitii
+		-=>il shiftez la stanga  cu 6
+		-al doilea byte ii folosesc toate valorile si le mut in primul byte de pe poz 6 pana la poz 1
+		-al treilea byte il folosesc pentru completare=>il shiftez la dreapta cu 4 si il adun si pe el l primul
+		-am actualizat indexul de folosire cu  2 si pe cel de modificare cu 1
+	*pentru al treilea cuplu:
+		-am folosit 4 biti din primul si 4 din al doilea
+		-am adunat pe al doiela la primul
+		-am actualizat amandoi indicii cu o unitate
+	*pentru al patrulea cuplu:
+		-am folosit ultimul bit din din primul byte=>shl cu 7
+		-am folosit pe toti din al doilea=>shl cu 2 si adunat la primul
+		-am folist pe primii doi din  al treilea byte =>shr cu 3 si adunoat la primul
+		-am actualizat indexul de folosire cu 2 si pe cel de completare cu 1
+	*pentru al cincilea cuplu:
+		-am folosit cei 3 biti ramasi din primul byte
+		-pe toti din byteul doi pe care i am adunat la primul
+		--am actualizat indexul de folosire cu 2 si pe cel de completare cu 1
+ -am repetat acesti pasi pana am gasit byteul null
+
+---------
+| task5 |
+---------
+In rezolvarea acestui task am urmat urmatorii pasi:
+-am initializat cheia cu 0
+-am verificat byte cu byte daca pe 5 bytes consecutivi se gaseste force
+-daca un byte nu corespunde trec la urmatorul
+-daca am terminat sirul si n am gasit incrementez cheia
+-cand gasesc cheia fac xor fiecarui byte cu ea
+
+---------
+| task6 |
+---------
+In rezolvarea acestui task am urmat urmatorii pasi:
+-Am folisit o tabela pentru care am alocat spatiu pe stiva
+-am pus pe octetii pari alfabetul in ordine
+-pe cei impari in functie de frecventa lor de aparitie literele corespunzatoare
+-pentru a calcula vectorul de frecventa am facut un algoritm in java si pentru fiecare litera din alfabet am calculat numarul de aparitii
+-si am folosit textul de la 6 ca fisier de input
+-in functia mea am comparat octetii din strring cu fiecare dintre cei impari din tabela
+-daca erau valori egale inlocuiam octetul din stringu cu cel decodat din tabela
+-acesta fiind pe o pozitie in spatele celui gasit in tabel
+

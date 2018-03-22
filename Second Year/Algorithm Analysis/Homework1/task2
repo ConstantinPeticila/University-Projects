@@ -1,0 +1,76 @@
+13
+SS Sa Sb Sc Sd Ssa Ssb Ssc Ssd S0 Sf Sff Sfff
+1
+Sfff
+S0
+70
+Sa a Sa a R
+Sa b Ssb 0 R
+Sa c Ssc 0 R
+Sa d Ssd 0 R
+Sa 0 Sa 0 R
+Sa # Sf # L
+Sb a Ssa 0 R
+Sb b Sb b R
+Sb c Ssc 0 R
+Sb d Ssd 0 R
+Sb 0 Sb 0 R
+Sb # Sf # L
+Sc a Ssa 0 R
+Sc b Ssb 0 R
+Sc c Sc c R
+Sc d Ssd 0 R
+Sc 0 Sc 0 R
+Sc # Sf # L
+Sd a Ssa 0 R
+Sd b Ssb 0 R
+Sd c Ssc 0 R
+Sd d Sd d R
+Sd 0 Sd 0 R
+Sd # Sf # L
+Ssa a Ssa a R
+Ssa b SS 0 L
+Ssa c SS 0 L
+Ssa d SS 0 L
+Ssa 0 Ssa 0 R
+Ssa # Sf # L
+Ssb a SS 0 L
+Ssb b Ssb b R
+Ssb c SS 0 L
+Ssb d SS 0 L
+Ssb 0 Ssb 0 R
+Ssb # Sf # L
+Ssc a SS 0 L
+Ssc b SS 0 L
+Ssc c Ssc c R
+Ssc d SS 0 L
+Ssc 0 Ssc 0 R
+Ssc # Sf # L
+Ssd a SS 0 L
+Ssd b SS 0 L
+Ssd c SS 0 L
+Ssd d Ssd d R
+Ssd 0 Ssd 0 R
+Ssd # Sf # L
+SS a SS a L
+SS b SS b L
+SS c SS c L
+SS d SS d L
+SS 0 SS 0 L
+SS # S0 # R
+S0 0 S0 0 R
+S0 a Sa a H
+S0 b Sb b H
+S0 c Sc c H
+S0 d Sd d H
+Sf 0 Sf # L
+Sf a Sff a L
+Sf b Sff b L
+Sf c Sff c L
+Sf d Sff d L
+Sff a Sff # L
+Sff b Sff # L
+Sff c Sff # L
+Sff d Sff # L
+Sff 0 Sff # L
+Sff # Sfff # H

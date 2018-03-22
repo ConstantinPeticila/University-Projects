@@ -1,6 +1,6 @@
 build:
-	javac AA.java
+	javac main.java
 run:
-	java AA
+	java main
 clean:
-	rm AA.class
+	rm main.class

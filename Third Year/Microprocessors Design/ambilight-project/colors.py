@@ -1,15 +1,13 @@
 import pyscreenshot as ImageGrab
 import time
 import os
-from colour import Color
 import serial
+from colour import Color
 
-# Define the total numberof leds
-LED_COUNT = 36
-# Number of leds per width
-WIDTH = 11
-# Number of leds per height
-HEIGHT = 7
+#Define leds
+LED_COUNT = 34 #total number of leds
+WIDTH = 10 # number per  per width
+HEIGHT = 7 #number per height
 
 # Open the serial port with the right configurations
 ser = serial.Serial()
